@@ -22,7 +22,7 @@ III - multiple-object movements
 * 100x trials per test
 * +/- 20 frames per trial (variable with the speed)
 
-## Author
+## Authors
 
 Pedro Machado <pedro.baptistamachado@ntu.ac.uk>
 
