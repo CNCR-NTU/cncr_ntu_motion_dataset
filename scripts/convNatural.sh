@@ -24,7 +24,6 @@ do
 		#rm $search_dir$entry
 		#index=$((index+1))
 	done
-	git rm $search_dir*.png
 	index=0
         #mkdir -p "../objects/"$K"/seq"$J
         #for I in {1..50}
