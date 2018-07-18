@@ -1,18 +1,31 @@
 #! /bin/bash
-echo "Preporcessing images"
-path2write = "../naturalDataSet/objects"
-path2read = "../naturalDataSet/simple/"
+echo "Pre-processing images"
+path2write="../naturalDataSet/objects"
+path2read="../naturalDataSet/simple/"
 #mkdir -p path2write
 angle=0
+searchstr="image0.jpg"
+
 for K in 'baby_toy_bottle' 'cone' 'egg' 'flat_circular_object' 'pen'
 do
     for J in {1..100}
     do
-    	search_dir=$path2read+$K"/vertical/trial"$J"/"
-    	echo $search)dir
-    	for entry in `ls $search_dir`; do
-    		echo $entry
+    	search_dir=$path2read$K"/looming/trial"$J"/"
+    	#echo $search_dir
+    	index=1
+    	for entry in `ls $search_dir`; 
+    	do
+		if [ "$entry" = "$searchstr" ]; 
+		then
+			echo $search_dir
+			echo $entry
+		fi
+		#convert $search_dir$entry $search_dir"img"$index".png"
+		#rm $search_dir$entry
+		#index=$((index+1))
 	done
+	git rm $search_dir*.png
+	index=0
         #mkdir -p "../objects/"$K"/seq"$J
         #for I in {1..50}
         #do
