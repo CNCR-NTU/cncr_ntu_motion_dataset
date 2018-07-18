@@ -11,9 +11,9 @@ for K in 'baby_toy_bottle' 'cone' 'egg' 'flat_circular_object' 'pen'
 do
     for J in {1..100}
     do
-    	for L in 'down-up' 
+    	for L in 'recede' 
     	do
-    		search_dir=$path2read$K"/vertical/trial"$J"/"
+    		search_dir=$path2read$K"/looming/trial"$J"/"
     	    	index=1
     		mkdir -p $path2write$L"/seq"$seq
     		for entry in `ls $search_dir`; 
