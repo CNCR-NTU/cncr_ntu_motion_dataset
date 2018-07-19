@@ -72,22 +72,16 @@ import os
 for j in range(0,6):
     if j==0:
         movement = "left-right"
-        movement1 = "left"
     elif j==1:
         movement = "right-left"
-        movement1 = "right"
     elif j==2:
         movement = "up-down"
-        movement1 = "up"
     elif j==3:
         movement = "down-up"
-        movement1 = "down"
     elif j==4:
         movement = "approach"
-        movement1 = movement
     elif j==5:
         movement = "recede"
-        movement1 = movement
 
     for i in range (1,501):
         url2read = os.path.expanduser('~') + '/Development/cncr_object_motion_dataset/naturalDataSet/objects/'+movement+"/seq"+str(i)+ '/'
@@ -99,7 +93,7 @@ for j in range(0,6):
         F2P = len(fileNames)
         string="inconclusive"
         for k in range(1,F2P):
-            string+=","+movement1
+            string+=","+movement
         string+="\n"
         print url2write+"labels.csv"
         file=open(url2write+"labels.csv","w+")
