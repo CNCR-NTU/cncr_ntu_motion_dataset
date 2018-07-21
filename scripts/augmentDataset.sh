@@ -18,7 +18,7 @@ do
 		#echo $J": "$count
 		for k in $(seq 1 $count)
 		do
-			convert -rotate $angle $path2read"seq"$J"/img"$k".jpg" $path2write$I"/seq"$J"/img"$k".jpg"
+			convert -rotate $angle $path2read"seq"$J"/img"$k".png" $path2write$I"/seq"$J"/img"$k".png"
 		done
 		
 	done

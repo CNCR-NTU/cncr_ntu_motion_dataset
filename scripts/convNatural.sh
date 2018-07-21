@@ -11,10 +11,11 @@ for K in 'baby_toy_bottle' 'cone' 'egg' 'flat_circular_object' 'pen'
 do
     for J in {1..100}
     do
-    	for L in 'down-up' 
+    	for L in 'recede' 
     	do
-    		search_dir=$path2read$K"/vertical/trial"$J"/"
+    		search_dir=$path2read$K"/looming/trial"$J"/"
     		mkdir -p $path2write$L"/seq"$seq
+    		I=1
     		for entry in `ls $search_dir`; 
 	    	do
 			#if [ "$entry" = "$searchstr" ]; 
@@ -22,8 +23,9 @@ do
 			#	echo $search_dir
 			#	echo $entry
 			#fi
-			convert $search_dir$entry -resize 40x40\!  $path2write$L"/seq"$seq"/"$entry
-			convert $path2write$L"/seq"$seq"/"$entry -colorspace Gray -separate -average $path2write$L"/seq"$seq"/"$entry
+			convert $search_dir"img"$I".jpg" -resize 40x40\!  $path2write$L"/seq"$seq"/img"$I".png"
+			convert $path2write$L"/seq"$seq"/img"$I".png" -colorspace Gray -separate -average $path2write$L"/seq"$seq"/img"$I".png"
+			I=$((I+1))
 		done
 		seq=$((seq+1))
 		#mkdir -p "../objects/"$K"/seq"$J
