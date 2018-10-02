@@ -1,8 +1,8 @@
 #! /bin/bash
 echo "Pre-processing images"
-path2write="../naturalDataSet/objects/"
-path2read="../naturalDataSet/objects/recede/"
-#mkdir -p path2write
+path2write="../naturalDataSet/raw_objects/"
+path2read="../naturalDataSet/raw_objects/recede/"
+mkdir -p -- "$path2write"
 
 
 for J in {1..500}
