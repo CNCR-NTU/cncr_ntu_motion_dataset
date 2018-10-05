@@ -23,7 +23,8 @@ II - mixed obeject movements
 
 III - multiple-object movements
 
-### Details
+#### Details
+
 * 100x trials per test
 * +/- 20 frames per trial (variable with the speed)
 
