@@ -11,9 +11,10 @@ for K in 'baby_toy_bottle' 'cone' 'egg' 'flat_circular_object' 'pen'
 do
     for J in {1..100}
     do
-    	for L in 'recede' #'down-up' #
+    	for L in 'down-up' #'recede' #
     	do
-    		search_dir=$path2read$K"/looming/trial"$J"/"
+    		#!!!!!!!!!!!!!!!!!!!CHANGE HERE vertical or looming
+    		search_dir=$path2read$K"/vertical/trial"$J"/"
     		mkdir -p $path2write$L"/seq"$seq
     		I=1
     		for entry in `ls $search_dir`; 
