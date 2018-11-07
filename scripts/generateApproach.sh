@@ -4,7 +4,8 @@ path2write="../objects/"
 path2read="../objects/"
 mkdir -p -- "$path2write"
 
-for K in 'baby_toy_bottle' 'cone' 'egg' 'flat_circular_object' 'pen'
+
+for K in 'space_shuttle' #'baby_toy_bottle' 'cone' 'egg' 'flat_circular_object' 'pen' 'people'
 do
     for J in {1..100}
     do

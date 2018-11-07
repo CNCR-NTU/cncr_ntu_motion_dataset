@@ -2,7 +2,7 @@
 import os.path
 import os
 
-object=['baby_toy_bottle','cone','egg','flat_circular_object','pen']
+object=['baby_toy_bottle','cone','egg','flat_circular_object','pen','people','space_shuttle'] 
 movement=["left-right","left-right","right-left", "up-down", "down-up", "approach", "recede"]
 for j in movement:
 	for l in object:
